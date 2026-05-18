@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "order-portal",
+  "compatibility_date": "2026-05-18",
+  "pages_build_output_dir": "./dist",
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "order_portal",
+      "database_id": "abe17466-b16d-417a-a9cd-25a6770c989c",
+      "migrations_dir": "./db/migrations"
+    }
+  ],
+  "vars": {
+    "APP_NAME": "Order Portal",
+    "APP_URL": "https://order-portal.pages.dev",
+    "EMAIL_FROM": "hello@example.com",
+    "EMAIL_PROVIDER": "resend",
+    "SESSION_COOKIE_NAME": "order_portal_session",
+    "ALLOW_DEV_CODE_RESPONSE": "false"
+  }
+}
