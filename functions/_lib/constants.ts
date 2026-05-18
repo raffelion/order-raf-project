@@ -3,5 +3,5 @@ export const VERIFICATION_CODE_TTL_MS = 1000 * 60 * 10
 export const PASSWORD_SETUP_TTL_MS = 1000 * 60 * 20
 export const VERIFICATION_RESEND_COOLDOWN_MS = 1000 * 60
 export const VERIFICATION_MAX_FAILED_ATTEMPTS = 5
-export const PASSWORD_ITERATIONS = 210_000
+export const PASSWORD_ITERATIONS = 100_000
 export const COOKIE_NAME_FALLBACK = 'order_portal_session'
