@@ -59,7 +59,7 @@ export function LandingPage() {
             <article className="hero-stage-card hero-stage-secondary">
               <span className="mini-label">Inside the portal</span>
               <strong>Project status that makes sense</strong>
-              <p>Clients stop asking “any update?” every four hours. Anjay 😹</p>
+              <p>Clients stop asking "any update?" every four hours. Anjay 😹</p>
             </article>
           </div>
         </div>

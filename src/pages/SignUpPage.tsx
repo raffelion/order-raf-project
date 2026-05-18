@@ -49,7 +49,7 @@ export function SignUpPage() {
         <form className="form-stack" onSubmit={handleSubmit}>
           <label>
             Full name
-            <input value={name} onChange={(event) => setName(event.target.value)} placeholder="Rafi Ahmad" required />
+            <input value={name} onChange={(event) => setName(event.target.value)} placeholder="Your Name" required />
           </label>
           <label>
             Email
