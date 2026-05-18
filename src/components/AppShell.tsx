@@ -22,8 +22,10 @@ export function AppShell() {
         </nav>
 
         <div className="sidebar-footer">
-          <p>{user?.name}</p>
-          <span>{user?.role}</span>
+          <div className="sidebar-user">
+            <p>{user?.name}</p>
+            <span>{user?.role}</span>
+          </div>
           <button type="button" className="ghost-button" onClick={() => void signOut()}>
             Sign out
           </button>

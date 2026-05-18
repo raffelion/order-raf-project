@@ -657,14 +657,24 @@ textarea:focus {
 
 .sidebar-footer {
   margin-top: auto;
-  gap: 10px;
+  gap: 14px;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-user {
+  display: grid;
+  gap: 4px;
 }
 
 .sidebar-footer p {
   font-weight: 700;
   color: #ffffff;
+}
+
+.sidebar-footer .ghost-button {
+  justify-self: start;
+  min-width: 128px;
 }
 
 .content-area {
@@ -682,6 +692,10 @@ textarea:focus {
   gap: 16px;
   align-items: start;
   justify-content: space-between;
+}
+
+.panel-heading {
+  margin-bottom: 18px;
 }
 
 .page-header h1 {
