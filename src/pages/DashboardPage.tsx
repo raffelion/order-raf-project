@@ -22,11 +22,14 @@ export function DashboardPage() {
     <section className="page-shell">
       <header className="page-header">
         <div>
-          <span className="eyebrow">Overview</span>
-          <h1>Dashboard</h1>
+          <span className="eyebrow">Workspace overview</span>
+          <h1>Everything moving across your client portal.</h1>
+          <p className="page-lead">
+            Track open work, pending revisions, and fresh requests without hunting through DMs and scattered docs.
+          </p>
         </div>
         <Link to="/projects/new" className="primary-link">
-          New project request
+          Create new brief
         </Link>
       </header>
 
@@ -48,6 +51,17 @@ export function DashboardPage() {
           <strong>{summary?.overdueProjects ?? 0}</strong>
         </article>
       </div>
+
+      <section className="panel spotlight-panel">
+        <div>
+          <span className="mini-label">Why this matters</span>
+          <h2>Clients get clarity. You get fewer chaotic follow-ups.</h2>
+        </div>
+        <p>
+          This dashboard is your clean operating layer for onboarding, scoping, delivery updates, and revision control.
+          Less confusion, more momentum.
+        </p>
+      </section>
 
       <section className="panel">
         <div className="panel-heading">

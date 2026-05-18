@@ -18,17 +18,20 @@ export function ProjectsPage() {
     <section className="page-shell">
       <header className="page-header">
         <div>
-          <span className="eyebrow">Projects</span>
-          <h1>All project requests</h1>
+          <span className="eyebrow">Project pipeline</span>
+          <h1>Track every live request in one timeline.</h1>
+          <p className="page-lead">
+            From first brief to final revision, this is where the client-facing delivery flow stays readable.
+          </p>
         </div>
         <Link to="/projects/new" className="primary-link">
-          New request
+          New brief
         </Link>
       </header>
 
       <div className="panel">
         {projects.length === 0 ? (
-          <p className="empty-state">You have no project requests yet.</p>
+          <p className="empty-state">No projects yet. Drop in your first brief and start building with actual structure.</p>
         ) : (
           <div className="project-list">
             {projects.map((project) => (
@@ -36,7 +39,7 @@ export function ProjectsPage() {
                 <div>
                   <strong>{project.title}</strong>
                   <span>
-                    {project.businessName} • {project.websiteType} • {project.deadline ? `Deadline ${formatDate(project.deadline)}` : 'No deadline yet'}
+                    {project.businessName} • {project.websiteType} • {project.deadline ? `Deadline ${formatDate(project.deadline)}` : 'No deadline set'}
                   </span>
                 </div>
                 <StatusPill status={project.status} />

@@ -48,8 +48,12 @@ export function NewProjectPage() {
     <section className="page-shell">
       <header className="page-header">
         <div>
-          <span className="eyebrow">Intake form</span>
-          <h1>Create a new project request</h1>
+          <span className="eyebrow">Project intake</span>
+          <h1>Write the brief once. Keep the whole project aligned.</h1>
+          <p className="page-lead">
+            Share the business context, goals, references, and must-have features so the build starts with less
+            guesswork.
+          </p>
         </div>
       </header>
 
@@ -64,43 +68,73 @@ export function NewProjectPage() {
         </label>
         <label>
           Website type
-          <input value={form.websiteType} onChange={(event) => updateField('websiteType', event.target.value)} placeholder="Company profile, landing page, store" required />
+          <input
+            value={form.websiteType}
+            onChange={(event) => updateField('websiteType', event.target.value)}
+            placeholder="Landing page, company site, portfolio, store"
+            required
+          />
         </label>
         <label>
           Budget
-          <input value={form.budget} onChange={(event) => updateField('budget', event.target.value)} placeholder="Rp 5.000.000 - 8.000.000" />
+          <input value={form.budget} onChange={(event) => updateField('budget', event.target.value)} placeholder="$1,000 - $2,500 or custom range" />
         </label>
         <label>
           Deadline
-          <input value={form.deadline} onChange={(event) => updateField('deadline', event.target.value)} placeholder="2026-06-10" />
+          <input value={form.deadline} onChange={(event) => updateField('deadline', event.target.value)} placeholder="2026-06-10 or launch target" />
         </label>
         <label className="wide">
           Project objective
-          <textarea value={form.objective} onChange={(event) => updateField('objective', event.target.value)} required />
+          <textarea
+            value={form.objective}
+            onChange={(event) => updateField('objective', event.target.value)}
+            placeholder="What should this website help the business achieve?"
+            required
+          />
         </label>
         <label className="wide">
           References
-          <textarea value={form.references} onChange={(event) => updateField('references', event.target.value)} placeholder="Paste links or describe inspiration" />
+          <textarea
+            value={form.references}
+            onChange={(event) => updateField('references', event.target.value)}
+            placeholder="Paste links, screenshots, or describe the vibe you want"
+          />
         </label>
         <label>
           Preferred style
-          <input value={form.preferredStyle} onChange={(event) => updateField('preferredStyle', event.target.value)} placeholder="Minimal, bold, corporate" />
+          <input
+            value={form.preferredStyle}
+            onChange={(event) => updateField('preferredStyle', event.target.value)}
+            placeholder="Minimal, editorial, modern tech, bold"
+          />
         </label>
         <label>
           Requested pages
-          <input value={form.requestedPages} onChange={(event) => updateField('requestedPages', event.target.value)} placeholder="Home, About, Contact, Pricing" />
+          <input
+            value={form.requestedPages}
+            onChange={(event) => updateField('requestedPages', event.target.value)}
+            placeholder="Home, About, Services, Contact, Pricing"
+          />
         </label>
         <label className="wide">
           Requested features
-          <textarea value={form.requestedFeatures} onChange={(event) => updateField('requestedFeatures', event.target.value)} placeholder="CMS, WhatsApp CTA, blog, gallery" />
+          <textarea
+            value={form.requestedFeatures}
+            onChange={(event) => updateField('requestedFeatures', event.target.value)}
+            placeholder="CMS, payment flow, booking, WhatsApp CTA, blog, gallery"
+          />
         </label>
         <label className="wide">
           Additional notes
-          <textarea value={form.notes} onChange={(event) => updateField('notes', event.target.value)} placeholder="Anything else that should be locked before work starts" />
+          <textarea
+            value={form.notes}
+            onChange={(event) => updateField('notes', event.target.value)}
+            placeholder="Anything sensitive, fixed, or non-negotiable before design and build starts"
+          />
         </label>
         <div className="wide form-actions">
           <button type="submit" className="primary-button" disabled={loading}>
-            {loading ? 'Submitting...' : 'Create request'}
+            {loading ? 'Submitting...' : 'Create brief'}
           </button>
           <FormMessage message={message} tone={tone} />
         </div>

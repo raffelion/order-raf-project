@@ -10,10 +10,15 @@ export function AppShell() {
       <aside className="sidebar">
         <BrandLockup to="/dashboard" subtitle="Order portal" />
 
+        <div className="sidebar-intro">
+          <span className="mini-label">Workspace</span>
+          <p>Keep delivery updates, revisions, and client requests in one clean lane.</p>
+        </div>
+
         <nav className="nav-links">
           <NavLink to="/dashboard">Overview</NavLink>
           <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/projects/new">New Request</NavLink>
+          <NavLink to="/projects/new">New Brief</NavLink>
         </nav>
 
         <div className="sidebar-footer">
