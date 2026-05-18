@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { BrandLockup } from '../components/BrandLockup'
 import { apiSend, ApiError } from '../lib/api'
 import { FormMessage } from '../components/FormMessage'
 
@@ -76,6 +77,7 @@ export function VerifyEmailPage() {
   return (
     <div className="auth-layout">
       <div className="auth-card">
+        <BrandLockup className="brand-light auth-brand" subtitle="Email verification flow" />
         <span className="eyebrow">Email verification</span>
         <h1>Enter your 6-digit code</h1>
         <p>Use the code we sent to your inbox, then continue to set your password.</p>

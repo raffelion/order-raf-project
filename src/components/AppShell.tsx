@@ -1,5 +1,6 @@
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../auth/useAuth'
+import { BrandLockup } from './BrandLockup'
 
 export function AppShell() {
   const { user, signOut } = useAuth()
@@ -7,13 +8,7 @@ export function AppShell() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <Link to="/dashboard" className="brand">
-          <img src="/raf-circle-logo.png" alt="Brand logo" className="brand-logo" />
-          <div>
-            <strong>Order Portal</strong>
-            <span>Client workspace</span>
-          </div>
-        </Link>
+        <BrandLockup to="/dashboard" subtitle="Order portal" />
 
         <nav className="nav-links">
           <NavLink to="/dashboard">Overview</NavLink>

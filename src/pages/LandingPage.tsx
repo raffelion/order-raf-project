@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom'
+import { BrandLockup } from '../components/BrandLockup'
 
 export function LandingPage() {
   return (
     <div className="landing-page">
       <section className="hero-panel">
+        <div className="hero-topbar">
+          <BrandLockup className="brand-light" subtitle="Portal client system" />
+        </div>
         <div className="hero-copy">
           <span className="eyebrow">Cloudflare-ready client portal</span>
           <h1>Keep orders, revisions, and approvals in one place.</h1>

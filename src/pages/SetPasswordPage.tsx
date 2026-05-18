@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../auth/useAuth'
+import { BrandLockup } from '../components/BrandLockup'
 import { FormMessage } from '../components/FormMessage'
 import { apiSend, ApiError } from '../lib/api'
 
@@ -75,6 +76,7 @@ export function SetPasswordPage() {
   return (
     <div className="auth-layout">
       <div className="auth-card">
+        <BrandLockup className="brand-light auth-brand" subtitle="Password setup" />
         <span className="eyebrow">Final setup</span>
         <h1>Create your password</h1>
         <p>{activeState?.email ? `Verified email: ${activeState.email}` : 'Finish creating your account password.'}</p>

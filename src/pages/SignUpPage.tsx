@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { BrandLockup } from '../components/BrandLockup'
 import { apiSend, ApiError } from '../lib/api'
 import { FormMessage } from '../components/FormMessage'
 
@@ -41,6 +42,7 @@ export function SignUpPage() {
   return (
     <div className="auth-layout">
       <div className="auth-card">
+        <BrandLockup className="brand-light auth-brand" subtitle="Portal client access" />
         <span className="eyebrow">New client access</span>
         <h1>Create your portal account</h1>
         <p>We will send a 6-digit code to your email before you create your password.</p>

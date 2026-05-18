@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/useAuth'
+import { BrandLockup } from '../components/BrandLockup'
 import { FormMessage } from '../components/FormMessage'
 import { apiSend, ApiError } from '../lib/api'
 
@@ -33,6 +34,7 @@ export function SignInPage() {
   return (
     <div className="auth-layout">
       <div className="auth-card">
+        <BrandLockup className="brand-light auth-brand" subtitle="Secure client access" />
         <span className="eyebrow">Welcome back</span>
         <h1>Sign in to your dashboard</h1>
         <p>Use your verified email and password to open your project workspace.</p>
